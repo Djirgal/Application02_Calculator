@@ -4,5 +4,5 @@
     <dimen name="button_text">20sp</dimen>
     <dimen name="margin_button">5dp</dimen>
     <dimen name="vert_bias">0.5</dimen>
-    <dimen name="horizontal_bias">0.5</dimen>
+    <dimen name="horizontal_bias">0.25</dimen>
 </resources>
