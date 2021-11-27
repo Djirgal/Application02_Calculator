@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Calc</string>
+    <string name="app_name">-</string>
     <string name="btn_0">0</string>
     <string name="btn_1">1</string>
     <string name="btn_2">2</string>
@@ -14,8 +15,6 @@
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="multiply">*</string>
-    <string name="divide">/</string>
-    <!--  <string name="equal">=</string>-->
     <string name="del">del</string>
     <string name="calc">Рассчитать</string>
 </resources>
