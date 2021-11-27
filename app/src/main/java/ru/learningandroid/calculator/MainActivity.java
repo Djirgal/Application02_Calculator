@@ -24,17 +24,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Calculator calculator;
     private TextView textResult;
 
-    private Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button0;
-    private Button btnPlus, btnMinus, btnDivide, btnMultiply, btnPoint, btnDelete, btnCalc;
+    private Button button1;
+    private Button button2;
+    private Button button3;
+    private Button button4;
+    private Button button5;
+    private Button button6;
+    private Button button7;
+    private Button button8;
+    private Button button9;
+    private Button button0;
+
+    private Button btnPlus;
+    private Button btnMinus;
+    private Button btnDivide;
+    private Button btnMultiply;
+    private Button btnPoint;
+    private Button btnDelete;
+    private Button btnCalc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         makeToast("onCreate()");
-        if(savedInstanceState==null){
+        if (savedInstanceState == null) {
             makeToast("первый запуск onCreate()");
-        }else{
+        } else {
             makeToast("повторный запуск onCreate()");
         }
 
@@ -42,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
     }
 
-    private void initView(){
+    private void initView() {
 
         textResult = findViewById(R.id.textRes);
 
@@ -101,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        switch (v.getId()) {
             case R.id.button1:
                 calculator.addNumber("1");
                 setTextResult(textResult, calculator.getMathExpression());
@@ -172,25 +188,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void setTextResult(TextView textResult, String mathExpression){
+    private void setTextResult(TextView textResult, String mathExpression) {
         textResult.setText(mathExpression);
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
         makeToast("onStart()");
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle instanceState){
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
         super.onSaveInstanceState(instanceState);
         makeToast("onSaveInstanceState()");
         instanceState.putSerializable(KEY, calculator);
     }
 
     @Override
-    protected void onRestoreInstanceState(@NonNull Bundle instanceState){
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
         makeToast("onRestoreInstanceState()");
         calculator = (Calculator) instanceState.getSerializable(KEY);
@@ -199,19 +215,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         makeToast("onResume()");
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         makeToast("onPause()");
     }
 
     @Override
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
         makeToast("onStop()");
     }
@@ -228,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         makeToast("onDestroy()");
     }
 
-    private void makeToast(String toast){
+    private void makeToast(String toast) {
         Toast.makeText(this, toast, Toast.LENGTH_SHORT).show();
         Log.e("mylogs: ", toast);
     }

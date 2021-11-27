@@ -17,9 +17,9 @@ public class Calculator implements Serializable {
         arithmeticExpression = arithmeticExpression.concat(num);
     }
 
-    public void addOperation(String operand){
+    public void addOperation(String operand) {
         int length = arithmeticExpression.length();
-        String lastOperation="";
+        String lastOperation = "";
 // TBD: to think of processing "." buttonPoint
         if (length == 0)
             arithmeticExpression = "";
@@ -28,7 +28,7 @@ public class Calculator implements Serializable {
 
     }
 
-    public void deleteLast(){
+    public void deleteLast() {
         int length = arithmeticExpression.length();
 
         //if (!arithmeticExpression.equals("") && !arithmeticExpression.isEmpty()) {
