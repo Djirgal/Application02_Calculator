@@ -17,5 +17,5 @@
     <string name="divide">/</string>
     <!--  <string name="equal">=</string>-->
     <string name="del">del</string>
-    <string name="calc">Рассчитать</string>
+    <string name="calc">Calculate</string>
 </resources>
