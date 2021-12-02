@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivityThemeChoice"
-    style="@style/image_vert">
+    style="@style/image_horizon">
 
     <TextView
         android:id="@+id/textViewFirstPage"

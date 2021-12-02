@@ -17,4 +17,7 @@
     <string name="multiply">*</string>
     <string name="del">del</string>
     <string name="calc">Calculate</string>
+    <string name="light">Light theme</string>
+    <string name="dark">Dark theme</string>
+    <string name="suggestion">Please, choose ont of the theme:</string>
 </resources>
