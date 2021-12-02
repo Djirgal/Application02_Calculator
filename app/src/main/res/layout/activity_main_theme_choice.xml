@@ -7,7 +7,7 @@
     tools:context=".MainActivityThemeChoice"
     style="@style/image_vert">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,8 +17,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        android:fontFamily="@font/gomarice_solid_soldier"
-        android:textColor="@color/purple_500"
         android:textSize="@dimen/button_text"
         android:gravity="center"/>
 
@@ -36,8 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/light"
-            android:fontFamily="@font/gomarice_solid_soldier"
-            android:textColor="@color/white"
             android:textSize="@dimen/button_text"/>
 
         <com.google.android.material.radiobutton.MaterialRadioButton
@@ -45,14 +41,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/dark"
-            android:fontFamily="@font/gomarice_solid_soldier"
-            android:textColor="@color/black"
             android:textSize="@dimen/button_text"/>
     </RadioGroup>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/endActivity"
-        style="@style/Theme.MyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_button"
@@ -60,6 +53,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
