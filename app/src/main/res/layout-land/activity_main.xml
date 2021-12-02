@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     style="@style/image_horizon">
 
+
     <TextView
         android:id="@+id/textRes"
         android:layout_width="match_parent"
@@ -185,7 +186,6 @@
         android:text="@string/del"
         app:layout_constraintBottom_toTopOf="@id/calculate"
         app:layout_constraintEnd_toStartOf="@id/button0"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/button7"
         app:layout_constraintTop_toBottomOf="@id/button7" />
 
@@ -216,7 +216,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/divide"
         style="@style/Theme.MyButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_button"
         android:text="@string/divide"
@@ -224,6 +224,7 @@
         app:layout_constraintEnd_toEndOf="@id/multiply"
         app:layout_constraintStart_toEndOf="@id/buttonPoint"
         app:layout_constraintTop_toBottomOf="@id/multiply" />
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/calculate"
@@ -233,7 +234,19 @@
         android:layout_margin="@dimen/margin_button"
         android:text="@string/calc"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/buttonPoint"
-        app:layout_constraintStart_toStartOf="@id/button0" />
+        app:layout_constraintEnd_toEndOf="@id/button0"
+        app:layout_constraintStart_toStartOf="@id/del" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/chooseTheme"
+        style="@style/Theme.MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_button"
+        android:text="@string/choose"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/divide"
+        app:layout_constraintStart_toStartOf="@id/buttonPoint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

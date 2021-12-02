@@ -20,4 +20,6 @@
     <string name="light">Light theme</string>
     <string name="dark">Dark theme</string>
     <string name="suggestion">Please, choose ont of the theme:</string>
+    <string name="choose">Choose theme</string>
+    <string name="endActivity">Back</string>
 </resources>
