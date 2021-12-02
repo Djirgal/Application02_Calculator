@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class MainActivityThemeChoice extends AppCompatActivity {
 
@@ -49,7 +52,7 @@ public class MainActivityThemeChoice extends AppCompatActivity {
 
         //установка соответствющего радио-баттона
         setRadioButtonChecked();
-        // initThemeChooser();
+        initThemeChooser();
     }
 
 
@@ -146,4 +149,14 @@ public class MainActivityThemeChoice extends AppCompatActivity {
                 return R.style.MyLightTheme;
         }
     }
+
+    private void initThemeChooser() {
+        initRadioButton(findViewById(R.id.radioButtonLightStyle),
+                LIGHT_THEME);
+        initRadioButton(findViewById(R.id.radioButtonDarkStyle),
+                DARK_THEME);
+        RadioGroup rg = findViewById(R.id.radioButtons);
+        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(LIGHT_THEME))).setChecked(true);
+    }
+
 }
