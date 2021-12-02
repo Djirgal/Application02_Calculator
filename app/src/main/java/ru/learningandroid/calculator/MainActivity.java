@@ -1,7 +1,9 @@
 package ru.learningandroid.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -13,6 +15,7 @@ import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,10 +46,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnDelete;
     private Button btnCalc;
 
+    private Button btnTheme;
+
+    private Switch switchTheme;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+/*        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.MyDarkTheme);
+        } else {
+            setTheme(R.style.MyLightTheme);
+        }*/
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         makeToast("onCreate()");
         if (savedInstanceState == null) {
             makeToast("первый запуск onCreate()");
@@ -57,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         calculator = new Calculator();
         initView();
     }
+
+/*    @Override
+    public void onCheckedChangeListener()*/
 
     private void initView() {
 
@@ -113,6 +132,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCalc = findViewById(R.id.calculate);
         btnCalc.setOnClickListener(this);
 
+/*        switchTheme = findViewById(R.id.switcher);
+        if (switchTheme != null) switchTheme.setOnCheckedChangeListener(this);*/
+
+        btnTheme = findViewById(R.id.chooseTheme);
+        btnTheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent runThemeChoice = new Intent(MainActivity.this, MainActivityThemeChoice.class);
+                startActivity(runThemeChoice);
+            }
+        });
     }
 
     @Override
@@ -210,7 +240,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onRestoreInstanceState(instanceState);
         makeToast("onRestoreInstanceState()");
         calculator = (Calculator) instanceState.getSerializable(KEY);
-//To think about: should setTextResult() always gets 2nd param = calculator.getMathExpression()???
         setTextResult(textResult, calculator.getMathExpression());
     }
 

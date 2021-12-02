@@ -2,7 +2,7 @@ package ru.learningandroid.calculator;
 
 import java.io.Serializable;
 
-public class Calculator implements Serializable {
+public class Calculator implements Serializable, CalculatorModel{
 
     private String arithmeticExpression;
 
@@ -47,6 +47,21 @@ public class Calculator implements Serializable {
         result = arithmeticExpression;
         arithmeticExpression = result.concat(" = tbd");
         return arithmeticExpression;
+    }
+
+    @Override
+    public String expressionToPolishNotation(String arithmeticExpression) {
+        return null;
+    }
+
+    @Override
+    public double calculatePolishNotation(String polishNotation) {
+        return 1.0;
+    }
+
+    @Override
+    public int getOperatorPriority(char operator)  {
+        return 1;
     }
 }
 
