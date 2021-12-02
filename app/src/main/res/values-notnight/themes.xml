@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
     <style name="Theme.Application02_Calculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
@@ -21,4 +20,14 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/button_text</item>
     </style>
+    <style name="image_vert">
+        <item name="android:background">@drawable/back_to_school_vertical</item>
+        <item name="android:padding">@dimen/layout_padding</item>
+    </style>
+
+    <style name="image_horizon">
+        <item name="android:background">@drawable/back_to_school_horizontal</item>
+        <item name="android:padding">@dimen/layout_padding</item>
+    </style>
+
 </resources>

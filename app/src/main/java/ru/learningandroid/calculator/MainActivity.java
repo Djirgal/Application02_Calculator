@@ -210,7 +210,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onRestoreInstanceState(instanceState);
         makeToast("onRestoreInstanceState()");
         calculator = (Calculator) instanceState.getSerializable(KEY);
-//To think about: should setTextResult() always gets 2nd param = calculator.getMathExpression()???
         setTextResult(textResult, calculator.getMathExpression());
     }
 
